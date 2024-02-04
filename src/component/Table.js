@@ -10,16 +10,20 @@ function Table({list, total}) {
             <td className='font-bold'>Description</td>
             <td className='font-bold'>Quantity</td>
             <td className='font-bold'>Price</td>
+            <td className='font-bold'>CGST</td>
+              <td className='font-bold'>SGST</td>
             <td className='font-bold'>Amount</td>
           </tr>
         </thead>
         <tbody  className='w-[100%]'>
         {
-          list.map(({ id, description, price, amount, quantity }) => (
+          list.map(({ id, description, price, amount, quantity, cgst, sgst }) => (
           <tr>
             <td>{description}</td>
             <td>{quantity}</td>
             <td>{price}</td>
+            <td>{cgst}</td>
+                <td>{sgst}</td>
             <td>{amount}</td>
           </tr>
            ))
